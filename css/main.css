@@ -9871,7 +9871,7 @@ section.page {
         margin-right: 0; }
       .event:last-child {
         width: 100%;
-        padding-bottom: 50%;
+        padding-bottom: 40%;
         margin-bottom: 0; } }
   @media (max-width: 600px) {
     .event {
@@ -9898,6 +9898,7 @@ section.page {
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px; }
   .event__image img {
+    min-width: 120%;
     max-width: 120%;
     position: relative;
     left: -10%; }
