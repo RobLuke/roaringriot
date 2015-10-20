@@ -16,7 +16,7 @@
 	left: 0;
 	bottom: 0;
 	max-height: auto;
-	max-width: 100%;
+	min-width: 100%;
 	content: url(../images/people/crowdDark.png);
 	@include breakpoint($portable-landscape) {
 		max-width: 120%;

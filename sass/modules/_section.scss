@@ -101,7 +101,10 @@
 		left: 0;
 		bottom: 0;
 		max-height: auto;
-		max-width: 100%;
+		min-width: 100%;
+		@include breakpoint($TV) {
+			margin-bottom: -5%;
+		}
 		@include breakpoint($desktop) {
 			max-width: 100%;
 			right: 0;

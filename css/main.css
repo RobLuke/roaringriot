@@ -9687,7 +9687,7 @@ section.page {
   left: 0;
   bottom: 0;
   max-height: auto;
-  max-width: 100%;
+  min-width: 100%;
   content: url(../images/people/crowdDark.png); }
   @media (max-width: 950px) {
     .footer__image {
@@ -10193,7 +10193,10 @@ section.page {
     left: 0;
     bottom: 0;
     max-height: auto;
-    max-width: 100%; }
+    min-width: 100%; }
+    @media (min-width: 1200px) {
+      .section__image.center {
+        margin-bottom: -5%; } }
     @media (max-width: 1240px) {
       .section__image.center {
         max-width: 100%;
