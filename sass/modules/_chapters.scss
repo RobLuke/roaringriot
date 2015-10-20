@@ -1,4 +1,12 @@
 .chapters {
+	.titleBar {
+		padding: 12px 0;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 900;
+		color: white;
+		background: #0F0915;
+	}
 	ul {
 		@include clearfix;
 	}
@@ -11,9 +19,9 @@
 		border: 1px solid #efefef;
 		border-top: none;
 		border-left: none;
-		overflow: hidden;
+		overflow-Y: hidden;
 		cursor: pointer;
-		@include breakpoint($portable-landscape) {
+		@include breakpoint($portable-landscape-wide) {
 			width: percentage(1/6);
 			padding-bottom: percentage(1/6);
 		}
@@ -23,22 +31,51 @@
 		}
 	}
 }
+.chapter__color {
+	@include absolute(0,-1px,null,-1px);
+	height: 4px;
+	background: $color-primary;
+	&.Atlanta {
+		background: #C9233F;
+	}
+	&.Denver {
+		background: #F05623;
+	}
+	&.New.Orleans {
+		background: #C8AA76;
+	}
+	&.New.York {
+		background: #00A849;
+	}
+	&.Washington {
+		background: #6A1A0B;
+	}
+}
 .chapter__logo {
 	@include square(50%);
-	@include circle();
 	@include absolute(15%,0,null,0);
 	margin: 0 auto;
-	background-color: #eee;
 	transform: translate3d(0, 0, 0) scale(1);
 	@include transition(transform 200ms ease-in-out);
+	img {
+		max-width: 100%;
+		position: absolute;
+		@include transition(opacity 300ms ease-in-out);
+	}
+	.chapter__logo--color {
+		@include opacity(0);
+	}
+	.chapter__logo--bw {
+		@include opacity(1);
+	}
 }
 .chapter__location {
 	position: absolute;
-	bottom: 6px;
+	bottom: 12%;
 	left: 0;
 	right: 0;
 	text-align: center;
-	font-size: 8px;
+	font-size: 10px;
 	font-weight: 700;
 	@include translate3d(0, 0, 0);
 	@include transition(transform 300ms ease-in-out);
@@ -62,27 +99,53 @@
 		bottom: 0;
 		margin-top: auto;
 		margin-bottom: auto;
+		p {
+			font-size: 8px;
+			font-weight: 500;
+			text-transform: uppercase;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			bottom: 0%;
+		}
 	}
 	.chapter__join {
 		left: 4px;
+		.badge {
+			background-color: $color-primary;
+		}
 	}
 	.chapter__facebook {
 		right: 4px;
+		.badge {
+			background: #3463A5;
+		}
 	}
 	.badge {
 		@include square(50%);
 		@include circle();
-		@include absolute(0,0,0,0);
+		@include absolute(0,0,20%,0);
 		margin: auto;
-		background-color: #eee;
+		overflow: hidden;
+		img {
+			@include square(100%);
+			@include absolute(0,0,0,0);
+			margin: auto;
+		}
 		&:hover {
-			background-color: #ddd;
+			background-color: #0F0915;
 		}
 	}
 }
 .chapters li:hover {
 	.chapter__logo {
 		transform: translate3d(0, -30%, 0) scale(.6);
+		.chapter__logo--color {
+			@include opacity(1);
+		}
+		.chapter__logo--bw {
+			@include opacity(0);
+		}
 	}
 	.chapter__location {
 		@include translate3d(0, 40%, 0);

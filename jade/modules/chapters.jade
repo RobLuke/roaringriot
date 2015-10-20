@@ -1,15 +1,33 @@
-mixin chapter(number)
-	- for (var x = 0; x < number; x++)
-		li.chapter
-			.chapter__logo
-			.chapter__location City Name
-			.chapter__links
-				.chapter__join
-					.badge
-				.chapter__facebook
-					.badge
+mixin chapter(colorImage, bwImage, location)
+	li.chapter
+		.chapter__color(class= location)
+		.chapter__logo
+			img.chapter__logo--color(src= colorImage)
+			img.chapter__logo--bw(src= bwImage)
+		.chapter__location= location
+		.chapter__links
+			.chapter__join
+				.badge
+					img(src='images/ui_icons/heart.svg')
+				p join
+			.chapter__facebook
+				.badge
+					img(src='images/ui_icons/facebook.svg')
+				p visit
 
 mixin chapters
 	.chapters
+		.titleBar Our Chapters
 		ul
-			+chapter(12)
+			+chapter('images/chapters/color/atlanta.png','images/chapters/bw/atlanta.png','Atlanta')
+			+chapter('images/chapters/color/queen.png','images/chapters/bw/queen.png','Charlotte')
+			+chapter('images/chapters/color/denver.png','images/chapters/bw/denver.png','Denver')
+			+chapter('images/chapters/color/gate.png','images/chapters/bw/gate.png','Greensboro')
+			+chapter('images/chapters/color/oak.png','images/chapters/bw/oak.png','Greenville')
+			+chapter('images/chapters/color/upstate.png','images/chapters/bw/upstate.png','Lake Norman')
+			+chapter('images/chapters/color/cola.png','images/chapters/bw/cola.png','New Orleans')
+			+chapter('images/chapters/color/apple.png','images/chapters/bw/apple.png','New York')
+			+chapter('images/chapters/color/capital.png','images/chapters/bw/capital.png','Washington')
+			+chapter('images/chapters/color/twin.png','images/chapters/bw/twin.png','Winston Salem')
+			+chapter('images/chapters/color/apple.png','images/chapters/bw/apple.png','New York')
+			+chapter('images/chapters/color/queen.png','images/chapters/bw/queen.png','Charlotte')

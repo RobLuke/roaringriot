@@ -68,7 +68,7 @@ $activeLink: rgba(0,0,0,0.08);
             background: $subMenu;
             @include border-radius(3px);
             @include drop-shadow(0,1px,2px,rgba(0,0,0,0.1));
-            padding: 12px 0;
+            padding: 8px 0;
             @include opacity(0);
             @include translate3d(0, 30px, 0);
             .navigation__sublink {
@@ -77,7 +77,7 @@ $activeLink: rgba(0,0,0,0.08);
                 a {
                     display: block;
                     @include square(100%);
-                    @include pad(16px, 24px);
+                    @include pad(14px, 24px);
                 }
                 &:hover {
                     background: $activeLink;

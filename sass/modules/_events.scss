@@ -64,9 +64,9 @@
 	.event__image--overlay {
 		@include absolute(0,0,0,0);
 		/* overlay: */
-		background-image: -webkit-linear-gradient(rgba(0,153,217,0.00) 11%, #009AD9 100%);
-		background-image: -o-linear-gradient(rgba(0,153,217,0.00) 11%, #009AD9 100%);
-		background-image: linear-gradient(rgba(0,153,217,0.00) 11%, #009AD9 100%);
+		background-image: -webkit-linear-gradient(rgba(0,153,217,0.00) 6%, #009AD9 93%);
+		background-image: -o-linear-gradient(rgba(0,153,217,0.00) 6%, #009AD9 93%);
+		background-image: linear-gradient(rgba(0,153,217,0.00) 6%, #009AD9 93%);
 		top: 30%;
 		@include transition(top 300ms ease-in-out);
 	}
