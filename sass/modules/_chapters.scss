@@ -1,4 +1,5 @@
 .chapters {
+	position: relative;
 	.titleBar {
 		padding: 12px 0;
 		text-align: center;
@@ -32,7 +33,9 @@
 	}
 }
 .chapter__container {
-	overflow-Y: hidden;
+	@include square(100%);
+	@include absolute(0,0,0,0);
+	overflow: hidden;
 }
 .chapter__color {
 	@include absolute(-4px,-1px,null,-1px);
