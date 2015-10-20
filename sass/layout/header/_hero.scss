@@ -1,0 +1,50 @@
+$heroHeight: 400px;
+
+.hero {
+	margin-top: $nav-height - 1;
+}
+.hero__image {
+	.hero__image__container {
+		height: $heroHeight;
+		@include absolute($nav-height - 1,0,0,0);
+		background-image: url(../images/backgrounds/facebook.jpg);
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		// @include image-cover;
+	}
+	.hero__overlay {
+		height: $heroHeight;
+		@include absolute($nav-height - 1,0,0,0);
+		@include angled-gradient(transparentize($color-primary,0.15), transparentize(adjust-hue($color-primary, -10deg),0.15));
+	}
+}
+.hero__container {
+	@include max-width;
+	height: $heroHeight;
+	position: relative;
+}
+.hero__message {
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  .h3 {
+  	font-size: 30px;
+  	font-weight: 500;
+  	color: white;
+  }
+  .h1 {
+  	font-size: 60px;
+  	font-weight: 900;
+  	color: white;
+  }
+  .button {
+  	margin-top: 48px;
+  }
+	@include breakpoint($portable) {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}

@@ -1,0 +1,35 @@
+//- column_number         = number of verticle and horizontal gridlock lines (overages are hidden)
+//- column_width          = gridlock line width
+//- column_gutter         = space between gridlock lines
+//- display_horizontal    = toggle horizontal gridlocks with "show--horizontal" & "hide--horizontal"
+//- display_vertical      = toggle horizontal gridlocks with "show--vertical" & "hide--vertical"
+
+mixin gridlock(column_number, column_width, column_gutter, display_vertical, display_horizontal)
+    ul#gridlock.gridlock__lines.hidden
+        - for (var x = 0; x < column_number; x++)
+            li.gridlock__line--verticle(class="#{display_vertical}" style="width: #{column_width}; margin-right: #{column_gutter};")
+                //- (style="margin-left: -#{column_gutter}")
+         ul(style="margin-left: -#{column_gutter}")
+            - for (var x = 0; x < column_number; x++)
+                li.gridlock__line--horizontal(class="#{display_horizontal}" style="height: #{column_width}; margin-bottom: #{column_gutter};")
+    .gridlock__toggle.gridlock(onclick="gridlockToggle(this)")
+        ul.gridlock__toggle__button
+            li
+            li
+            li
+            li
+
+    script(type='text/javascript')
+        | function gridlockToggle(e) {
+        |     var gridlock = document.getElementById('gridlock');
+        |     if(gridlock.className == 'gridlock__lines visible') {
+        |         gridlock.className = 'gridlock__lines hidden';
+        |     } else {
+        |         gridlock.className = 'gridlock__lines visible';
+        |     }
+        |     if(e.className == 'gridlock__toggle gridlock') {
+        |         e.className = 'gridlock__toggle close';
+        |     } else {
+        |         e.className = 'gridlock__toggle gridlock';
+        |     }
+        | }

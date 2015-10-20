@@ -1,0 +1,144 @@
+.section {
+	padding: 60px 0 80px;
+	position: relative;
+	@include clearfix;
+	min-height: 240px;
+	overflow: hidden;
+	&.white {
+		background-color: white;
+	}
+	&.blue {
+		@include angled-gradient;
+		.h2, p {
+			color: white;
+		}
+	}
+	&.grey {
+		background-color: #F5F7F8;
+	}
+}
+.section__container {
+	@include max-width;
+	@include clearfix;
+}
+.section__message {
+	width: 45%;
+	p {
+		font-size: 18px;
+		line-height: 1.5em;
+	}
+	.button {
+		margin: 0;
+		margin-top: 48px;
+	}
+	a {
+		display: block;
+		color: $color-primary;
+		text-decoration: underline;
+		margin-top: 32px;
+	}
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
+	}
+	&.center {
+		text-align: center;
+		margin: 0 auto;
+		width: auto;
+		max-width: 600px;
+		padding-bottom: 40%;
+		@include breakpoint($laptop) {
+			padding-bottom: 30%;
+		}
+		@include breakpoint($portable) {
+			padding-bottom: 40%;
+		}
+		@include breakpoint($mobile) {
+			padding-bottom: 50%;
+		}
+	}
+	@include breakpoint($portable) {
+		width: 100%;
+		text-align: center;
+		margin-bottom: -40px;
+		&.left,
+		&.right {
+			float: none;
+		}
+	}
+}
+.section__image {
+	max-height: 130%;
+	max-width: 45%;
+	@include image-cover;
+	&.left {
+		position: absolute;
+		left: 16px;
+		bottom: -80px;
+		@include breakpoint($portable-landscape) {
+			left: -5%;
+			max-width: 50%;
+		}
+		@include breakpoint($mobile) {
+			left: 0;
+			max-width: 85%;
+		}
+	}
+	&.right {
+		position: absolute;
+		right: 16px;
+		bottom: -80px;
+		@include breakpoint($mobile) {
+			right: 0;
+			max-width: 85%;
+		}
+	}
+	&.center {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		max-height: auto;
+		max-width: 100%;
+		@include breakpoint($desktop) {
+			max-width: 100%;
+			right: 0;
+			left: 0;
+		}
+		@include breakpoint($portable-landscape) {
+			max-width: 120%;
+			right: -10%;
+			left: -10%;
+		}
+		@include breakpoint($portable) {
+			max-width: 140%;
+			right: -20%;
+			left: -20%;
+		}
+		@include breakpoint($mobile) {
+			max-width: 200%;
+			right: -50%;
+			left: -50%;
+		}
+	}
+	@include breakpoint($portable) {
+		max-width: 60%;
+		&.left,
+		&.right {
+			position: relative;
+			margin: 8px auto 0;
+			left: auto;
+		}
+	}
+	&.whyRiot {
+		content: url(../images/people/beer.png);
+	}
+	&.joinUs {
+		content: url(../images/people/couple.png);
+	}
+	&.yourCity {
+		content: url(../images/people/crowd.png);
+	}
+}

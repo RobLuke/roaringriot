@@ -1,0 +1,22 @@
+doctype html
+html
+    //- Meta
+    include jade/head/head
+    body(onload='loaded()')
+        //- Meta
+        include jade/main
+        //- Navigation
+        include jade/layout/nav/navigation
+        //- Content
+        +heroHome
+        +chapters
+        +whyRiot
+        +joinUs
+        +events
+        +yourCity
+        +topSellers
+
+        //-Footer
+        +footer
+        //- Script
+        include jade/scripts/script

@@ -1,0 +1,15 @@
+mixin chapter(number)
+	- for (var x = 0; x < number; x++)
+		li.chapter
+			.chapter__logo
+			.chapter__location City Name
+			.chapter__links
+				.chapter__join
+					.badge
+				.chapter__facebook
+					.badge
+
+mixin chapters
+	.chapters
+		ul
+			+chapter(12)

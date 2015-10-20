@@ -1,0 +1,20 @@
+mixin store-item(image, price, text)
+	.store-item
+		.store-item__image
+			img(src= image)
+		.store-item__content
+			.overlay
+			.store-item__description
+				.h3.price= price
+				p.text= text
+				button.button.clear Purchase
+
+mixin topSellers
+	section.section.white
+		.section__container
+			h2.h2.section__title TOP SELLERS
+			ul.topSellers
+				+store-item('images/store/riot.jpg', '$24', 'Do you Riot?')
+				+store-item('images/store/atlanta.jpg', '$18', 'You are a Dirty Bird')
+				+store-item('images/store/insta.jpg', '$24', 'Do you See Me?')
+				+store-item('images/store/luke.jpg', '$24', 'Luke can Tackle Me!')

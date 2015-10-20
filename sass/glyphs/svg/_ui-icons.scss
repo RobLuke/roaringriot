@@ -1,0 +1,12 @@
+.ui__svgs {
+    @include square(48px);
+    @include absolute(0,0,0,0);
+    margin: auto;
+    display: block;
+    &:hover svg {@include opacity(1);}
+    svg {
+        @include absolute(0, 0, 0 ,0);
+        margin: auto;
+        @include opacity(0.54);
+    }
+}

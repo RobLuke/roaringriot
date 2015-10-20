@@ -1,0 +1,15 @@
+// assume min-width (by default) if only a number
+$mobile-small: max-width 480px;
+$mobile: max-width 600px;
+// set min-width/max-width if both values are numbers
+$portable: max-width 768px;
+$portable-landscape-narrow: max-width 850px;
+$portable-landscape: max-width 950px;
+$portable-landscape-wide: max-width 1025px;
+// if one value is a string, assume a feature/value pair
+$hover-zone: min-width 769px;
+$laptop: max-width 1124px;
+$desktop: max-width 1240px;
+$TV: max-width 1300px;
+// string tests together within parentheses, assume each item is a feature value pair
+$surfboard-height: (min-height 1000px) (orientation portrait);

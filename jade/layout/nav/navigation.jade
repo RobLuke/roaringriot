@@ -1,0 +1,54 @@
+mixin nav(link, name)
+	li.navigation__link.link
+		a.anchor(href= link)= name
+
+mixin navParent(name)
+	li.navigation__link
+		p.anchor= name
+		ul.navigation__sublinks
+			block
+
+mixin navChild(link, name)
+	li.navigation__sublink
+		a.anchor(href= link)= name
+
+nav.navigation
+	.navigation__container
+		a(href='#').logo ROARING
+			span RIOT
+		ul.navigation__links
+			+nav('#', 'Home')
+			+navParent('Membership')
+				+navChild('#', 'Purchase Membership')
+				+navChild('#', 'Charlotte, NC Partners')
+				+navChild('#', 'Denver, CO Partners')
+				+navChild('#', 'Charleston, SC Partners')
+				+navChild('#', 'Winston-Salem, NC Partners')
+				+navChild('#', 'Atlanta, GA Partners')
+			+navParent('Shop')
+				+navChild('#', 'Men')
+				+navChild('#', 'Women')
+				+navChild('#', 'Children')
+				+navChild('#', 'Headwear')
+				+navChild('#', 'Novelties')
+			+navParent('Gameday')
+				+navChild('#', 'Home Games')
+				+navChild('#', 'Away Games')
+			+navParent('Chapters')
+				+navChild('#', 'Queen City Riot - Charlotte NC')
+				+navChild('#', 'Mile High Cats - Denver NC')
+				+navChild('#', 'NoLa Riot - New Orleans NC')
+				+navChild('#', 'Oak City Riot - Raleigh NC')
+				+navChild('#', 'Twin City Riot - Winston Salem NC')
+				+navChild('#', 'Atlanta Riot - Atlanta NC')
+				+navChild('#', 'Capital Riot - Washington, DC')
+				+navChild('#', 'Big Apple Riot - New York City NC')
+				+navChild('#', 'Gate City Riot - Greensboro NC')
+				+navChild('#', 'Upstate Riot - Greenville NC')
+				+navChild('#', 'LKN Riot - Lake Norman NC')
+			+navParent('More')
+				+navChild('#', 'About Us')
+				+navChild('#', 'Social Events')
+				+navChild('#', 'Gallery')
+				+navChild('#', 'Contact Us')
+		.burger

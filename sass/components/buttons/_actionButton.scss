@@ -1,0 +1,64 @@
+.actionButton {
+    @include square(56px);
+    @include circle();
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    transition: box-shadow 300ms ease, background-color 300ms ease;
+    background-color: #ED6B46;
+    display: block !important;
+    @include breakpoint($TV) {
+        bottom: 44px;
+    }
+    @include breakpoint($mobile) {
+        bottom: 16px;
+        right: 16px;
+    }
+    &:hover {
+        background-color: lighten(#ED6B46, 3%);
+        @include drop-shadow(0, 5px, 6px, rgba(0, 0, 0, 0.25));
+    }
+    &:active {
+        background-color: darken(#ED6B46, 5%);
+        @include drop-shadow(0, 0, 3px, rgba(0, 0, 0, 0.2));
+    }
+    @include drop-shadow(0, 1px, 5px, rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+    z-index: 999;
+    .actionButton--line-one,
+    .actionButton--line-two,
+    .actionButton--line-three {
+        background-color: white;
+        @include absolute(0, 0, 0, 0);
+        margin: auto;
+    }
+    &.add {
+        .actionButton--line-one {@include size(2px, 12px);}
+        .actionButton--line-two {display: none;}
+        .actionButton--line-three {@include size(12px, 2px);}
+    }
+    &.close {
+        .actionButton--line-one {
+            @include size(12px, 2px);
+            @include rotateZ(45deg);
+        }
+        .actionButton--line-two {display: none;}
+        .actionButton--line-three {
+            @include size(12px, 2px);
+            @include rotateZ(-45deg);
+        }
+    }
+    &.nav {
+        .actionButton--line-one {
+            @include size(16px, 2px);
+            top: -10px;
+        }
+        .actionButton--line-two {
+            @include size(16px, 2px);
+        }
+        .actionButton--line-three {
+            @include size(16px, 2px);
+            bottom: -10px;
+        }
+    }
+}

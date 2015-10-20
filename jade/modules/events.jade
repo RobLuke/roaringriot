@@ -1,0 +1,16 @@
+mixin event(image, title)
+	li.event
+		a(href='#')
+			.event__image
+				img(src= image)
+				.event__image--overlay
+			h3.h3.event__title= title
+
+mixin events
+	section.section.grey
+		.section__container
+			h2.h2.section__title UPCOMING EVENTS
+			ul.events
+				+event('images/events/grill.jpg', 'Event in the Parking Lot')
+				+event('images/events/seattle.jpg', 'Event in the Parking Lot')
+				+event('images/events/beer.jpg', 'Event in the Parking Lot')

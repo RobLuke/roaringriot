@@ -1,0 +1,32 @@
+.button {
+    border: none;
+    outline: none;
+    min-width: 200px;
+    height: 44px;
+    line-height: 42px;
+    padding: 0 8px;
+    margin: 0 8px;
+    background: white;
+    color: $color-primary;
+    font-weight: 500;
+    @include border-radius(3px);
+    @include font-size(1.4);
+    @include transition(background 120ms ease-in-out, color 120ms ease-in-out);
+    &:hover {
+        background: #0F0A15;
+        color: white;
+    }
+    &.clear {
+        background: transparent;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        min-width: 80px;
+        height: 34px;
+        line-height: 32px;
+        @include font-size(1.2);
+        &:hover {
+            background: $color-primary;
+            color: white;
+        }
+    }
+}

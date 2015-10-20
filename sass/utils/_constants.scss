@@ -1,0 +1,20 @@
+$nav-height: 60px;
+
+@mixin pad($a: 0,$b: 24px) {
+    padding: $a $b;
+    @include breakpoint($mobile) {
+        padding: $a ($b / 3) * 2;
+    }
+}
+
+@mixin max-width($width: 960px) {
+    max-width: $width;
+    margin: 0 auto;
+    position: relative;
+    @include pad();
+}
+
+$border: 1px solid $border-color;
+
+.hide {display: none !important;}
+

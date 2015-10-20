@@ -1,0 +1,36 @@
+.footer {
+	padding: 60px 0;
+	position: relative;
+	@include clearfix;
+	height: 600px;
+	background-color: #0F0B15;
+	overflow: hidden;
+}
+.footer__container {
+	@include max-width;
+	@include clearfix;
+}
+.footer__image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	max-height: auto;
+	max-width: 100%;
+	content: url(../images/people/crowdDark.png);
+	@include breakpoint($portable-landscape) {
+		max-width: 120%;
+		right: -10%;
+		left: -10%;
+	}
+	@include breakpoint($portable) {
+		max-width: 140%;
+		right: -20%;
+		left: -20%;
+	}
+	@include breakpoint($mobile) {
+		max-width: 200%;
+		right: -50%;
+		left: -50%;
+	}
+}

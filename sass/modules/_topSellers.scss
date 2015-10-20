@@ -1,0 +1,110 @@
+.topSellers {
+	@include clearfix;
+}
+.store-item {
+	height: 0;
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 22%;
+	padding-bottom: 20%;
+	margin-right: 4%;
+	border: 1px solid #ddd;
+	@include border-radius(5px);
+	&:last-child {
+		margin-right: 0;
+	}
+	@include breakpoint($hover-zone) {
+		&:hover {
+			.store-item__content {
+				@include opacity(1);
+			}
+			.price,
+			.text,
+			.button {
+				@include translate3d(0, 0, 0);
+			}
+		}
+	}
+	@include breakpoint($portable) {
+		width: 48%;
+		padding-bottom: 50%;
+		margin-right: 4%;
+		margin-bottom: 4%;
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+	}
+}
+.store-item__image {
+	@include absolute(0,0,0,0);
+	@include border-radius(5px);
+	overflow: hidden;
+	img {
+		max-width: 100%;
+	}
+}
+.store-item__content {
+	@include opacity(0);
+	@include absolute(0,0,0,0);
+	background: rgba(255,255,255, 0.9);
+	@include border-radius(5px);
+	@include transition(opacity 200ms ease-in-out);
+	@include breakpoint($portable) {
+		@include opacity(1);
+		background: rgba(0,0,0, 0);
+	}
+}
+.store-item__description {
+	width: 100%;
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  @include breakpoint($portable) {
+		position: absolute;
+		top: auto;
+	  bottom: 0;
+	  padding: 16px;
+	  transform: translateY(0);
+	  text-align: left;
+	  background: rgba(255,255,255, 0.9);
+	  @include border-radius(0 0 5px 5px);
+	}
+  .price {
+  	color: $color-primary;
+		font-size: 30px;
+		font-weight: 900;
+		margin-bottom: 8px;
+		@include translate3d(0, 100%, 0);
+		@include transition(transform 250ms ease-in-out);
+		@include breakpoint($portable) {
+			@include translate3d(0, 0, 0);
+			margin-bottom: 0;
+		}
+  }
+  .text {
+  	font-size: 16px;
+		font-weight: 500;
+		padding-bottom: 16px;
+		@include translate3d(0, 100%, 0);
+		@include transition(transform 310ms ease-in-out);
+		@include breakpoint($portable) {
+			@include translate3d(0, 0, 0);
+			padding-bottom: 0;
+			font-size: 12px;
+			display: none;
+		}
+  }
+  .button {
+		@include translate3d(0, 100%, 0);
+		@include transition(transform 370ms ease-in-out);
+		@include breakpoint($portable) {
+			@include absolute(19px,8px,null,null);
+			@include translate3d(0, 0, 0);
+			font-size: 10px;
+			height: 30px;
+			line-height: 28px;
+		}
+  }
+}
