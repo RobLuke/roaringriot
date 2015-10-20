@@ -2,13 +2,13 @@
 	padding: 60px 0;
 	position: relative;
 	@include clearfix;
-	height: 600px;
 	background-color: #0F0B15;
 	overflow: hidden;
 }
 .footer__container {
 	@include max-width;
 	@include clearfix;
+	height: 500px;
 }
 .footer__image {
 	position: absolute;
@@ -32,5 +32,67 @@
 		max-width: 200%;
 		right: -50%;
 		left: -50%;
+	}
+}
+
+.footer__subscribe {
+	width: 280px;
+	height: 30px;
+	position: relative;
+	margin: 48px auto 0;
+	background: rgba(255,255,255,0.3);
+	@include border-radius();
+	input {
+		@include size(180px, 100%);
+		padding-left: 16px;
+		border: none;
+		outline: none;
+		background: transparent;
+		color: white;
+		font-size: 12px;
+	}
+	button.button {
+		max-width: 100px;
+		min-width: 100px;
+		width: 100px;
+		position: absolute;
+		right: 0;
+		margin-right: 0;
+		background: $color-primary;
+		color: white;
+		font-size: 14px;
+		height: 30px;
+		line-height: 28px;
+		@include border-radius(0 5px 5px 0);
+	}
+}
+.footer__base {
+	@include absolute(null,0,-40px,0);
+	@include pad;
+	text-align: center;
+	p {
+		padding-bottom: 16px;
+		color: rgba(255,255,255,0.6);
+		font-size: 12px;
+		line-height: 1.3em;
+	}
+	a {
+		color: $color-primary;
+	}
+}
+.footer__social {
+	padding-bottom: 16px;
+	li {
+		@include square(24px);
+		position: relative;
+		display: inline-block;
+		@include circle();
+		background: $color-primary;
+		margin: 8px;
+		img {
+			@include square(100%);
+			@include absolute(0,0,0,0);
+			margin: auto;
+		}
 	}
 }

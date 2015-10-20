@@ -1,19 +1,20 @@
 mixin chapter(colorImage, bwImage, location)
 	li.chapter
 		.chapter__color(class= location)
-		.chapter__logo
-			img.chapter__logo--color(src= colorImage)
-			img.chapter__logo--bw(src= bwImage)
-		.chapter__location= location
-		.chapter__links
-			.chapter__join
-				.badge
-					img(src='images/ui_icons/heart.svg')
-				p join
-			.chapter__facebook
-				.badge
-					img(src='images/ui_icons/facebook.svg')
-				p visit
+		.chapter__container
+			.chapter__logo
+				img.chapter__logo--color(src= colorImage)
+				img.chapter__logo--bw(src= bwImage)
+			.chapter__location= location
+			.chapter__links
+				.chapter__join
+					.badge
+						img(src='images/ui_icons/heart.svg')
+					p join
+				.chapter__facebook
+					.badge
+						img(src='images/ui_icons/facebook.svg')
+					p visit
 
 mixin chapters
 	.chapters
