@@ -41,7 +41,7 @@
 	position: relative;
 	margin: 48px auto 0;
 	background: rgba(255,255,255,0.3);
-	@include border-radius();
+	@include border-radius(3px);
 	input {
 		@include size(180px, 100%);
 		padding-left: 16px;
@@ -63,7 +63,7 @@
 		font-size: 14px;
 		height: 30px;
 		line-height: 28px;
-		@include border-radius(0 5px 5px 0);
+		@include border-radius(0 3px 3px 0);
 	}
 }
 .footer__base {
