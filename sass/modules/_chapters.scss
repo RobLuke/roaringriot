@@ -11,7 +11,7 @@
 	}
 	ul {
 		@include clearfix;
-		margin-top: 4px;
+		//margin-top: 4px;
 	}
 	.chapter {
 		display: inline-block;
@@ -39,6 +39,7 @@
 	overflow: hidden;
 }
 .chapter__color {
+	display: none;
 	@include absolute(-4px,-1px,null,-1px);
 	height: 4px;
 	background: $color-primary;

@@ -9826,8 +9826,7 @@ section.page {
     color: white;
     background: #1A1919; }
   .chapters ul {
-    *zoom: 1;
-    margin-top: 4px; }
+    *zoom: 1; }
     .chapters ul:before, .chapters ul:after {
       content: " ";
       display: table; }
@@ -9863,6 +9862,7 @@ section.page {
   overflow: hidden; }
 
 .chapter__color {
+  display: none;
   position: absolute;
   top: -4px;
   right: -1px;
