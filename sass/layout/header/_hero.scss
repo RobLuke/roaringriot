@@ -25,7 +25,7 @@ $heroHeight: 412px;
 .hero__message {
 	@include center-vertical();
   .h3 {
-  	font-size: 28px;
+  	font-size: 26px;
   	font-weight: 500;
   	color: white;
   	text-transform: uppercase;
@@ -48,3 +48,34 @@ $heroHeight: 412px;
 		text-align: center;
 	}
 }
+
+.hero.secondary {
+	.hero__image {
+		.hero__image__container {
+			height: $heroHeight / 3 * 2;
+		}
+		.hero__overlay {
+			height: $heroHeight / 3 * 2;
+		}
+	}
+	.hero__container {
+		height: $heroHeight / 3 * 2;
+	}
+	.hero__message {
+		width: 300px;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: white;
+		h3.h3 {
+			font-size: 40px;
+			font-weight: 900;
+		}
+		p {
+			padding-top: 24px;
+		}
+	}
+}
+

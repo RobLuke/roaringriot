@@ -5,20 +5,20 @@ mixin chapter(colorImage, bwImage, location)
 			.chapter__logo
 				img.chapter__logo--color(src= colorImage)
 				img.chapter__logo--bw(src= bwImage)
-			.chapter__location= location
+			h6.h6.chapter__location= location
 			.chapter__links
 				.chapter__join
 					.badge
 						img(src='images/ui_icons/heart.svg')
-					p join
+					h6.h6 join
 				.chapter__facebook
 					.badge
 						img(src='images/ui_icons/facebook.svg')
-					p visit
+					h6.h6 visit
 
 mixin chapters
 	.chapters
-		.titleBar Our Chapters
+		h3.h3.titleBar Our Chapters
 		ul
 			+chapter('images/chapters/color/atlanta.png','images/chapters/bw/atlanta.png','Atlanta')
 			+chapter('images/chapters/color/queen.png','images/chapters/bw/queen.png','Charlotte')

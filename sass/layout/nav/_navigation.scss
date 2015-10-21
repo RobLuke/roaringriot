@@ -79,7 +79,7 @@ $activeLink: rgba(0,0,0,0.08);
                     @include pad(14px, 24px);
                 }
                 &:hover {
-                    @include angled-gradient(transparentize($color-primary,0.2), transparentize(adjust-hue($color-primary, -10deg),0.2));
+                    @include angled-gradient(transparentize($color-primary,0.2), transparentize(adjust-hue($color-primary, -5deg),0.2));
                     .anchor {
                         color: white;
                         font-weight: 500;
