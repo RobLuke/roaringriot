@@ -19,6 +19,9 @@
 	&.eventPage {
 		.section__container {
 			@include max-width(600px);
+			@include breakpoint($mobile) {
+				padding: 0 !important;
+			}
 		}
 	}
 }

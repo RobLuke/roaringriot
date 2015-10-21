@@ -1,20 +1,29 @@
 $heroHeight: 412px;
 
 .hero {
-	margin-top: $nav-height - 1;
+	margin-top: $header-height - 1;
+	@include breakpoint($portable) {
+		margin-top: $nav-height - 1;
+	}
 }
 .hero__image {
 	.hero__image__container {
 		height: $heroHeight;
-		@include absolute($nav-height - 1,0,0,0);
+		@include absolute($header-height - 1,0,0,0);
 		background-image: url(../images/backgrounds/facebook.jpg);
 		background-repeat: repeat-x;
 		background-size: auto 100%;
 	}
 	.hero__overlay {
 		height: $heroHeight;
-		@include absolute($nav-height - 1,0,0,0);
+		@include absolute($header-height - 1,0,0,0);
 		@include angled-gradient(transparentize($color-primary,0.15), transparentize(adjust-hue($color-primary, -5deg),0.15));
+	}
+	@include breakpoint($portable) {
+		.hero__image__container,
+		.hero__overlay {
+			top: $nav-height - 1;
+		}
 	}
 }
 .hero__container {

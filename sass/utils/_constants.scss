@@ -1,4 +1,7 @@
 $nav-height: 60px;
+$shop-height: 32px;
+$header-height: $nav-height + $shop-height;
+$link-height: $nav-height;
 
 @mixin pad($a: 0,$b: 24px) {
     padding: $a $b;
@@ -14,7 +17,7 @@ $nav-height: 60px;
     @include pad();
 }
 
-$border: 1px solid $border-color;
+$border: 1px solid #eee;
 
 .hide {display: none !important;}
 

@@ -82,18 +82,32 @@
 .eventAbstract {
 	padding-top: 24px;
 	padding-bottom: 112px;
+	@include breakpoint($mobile) {
+		padding-top: 0;
+		padding-bottom: 172px;
+		margin-top: -60px;
+	}
 	.event__image {
 		height: 0;
 		padding-bottom: 50%;
 		@include border-radius(5px);
 		margin-bottom: 32px;
+		@include breakpoint($mobile) {
+			margin-top: 1px;
+			@include border-radius(0);
+		}
 		img {
 			top: -10%;
 		}
 	}
 	.event__details {
-		padding-bottom: 20px;
 		//text-align: center;
+	}
+	.event__details,
+	.event__description {
+		@include breakpoint($mobile) {
+			padding: 0 16px;
+		}
 	}
 	.event__date,
 	.event__location {
@@ -109,6 +123,7 @@
 	}
 	.event__description {
 		padding-top: 32px;
+		margin-top: 20px;
 		position: relative;
 		p {
 			padding-bottom: 16px;
