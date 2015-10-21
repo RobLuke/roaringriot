@@ -173,6 +173,11 @@ $root: "../images/";
   bottom: $bottom;
   left: $left;
 }
+@mixin center-vertical($center: 50%) {
+  position: absolute;
+  top: $center;
+  transform: translateY(-$center);
+}
 @mixin center-absolute {
   position: absolute;
   top: 50%;

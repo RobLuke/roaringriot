@@ -33,6 +33,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/images\/backgrounds\/facebook.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 825422,
+		"inputAbbreviatedPath": "\/images\/backgrounds\/facebook.png",
+		"outputAbbreviatedPath": "\/images\/backgrounds\/facebook.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/chapters\/bw\/apple.png": {
 		"fileType": 32768,
 		"ignore": 0,

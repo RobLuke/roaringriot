@@ -51,6 +51,7 @@ $activeLink: rgba(0,0,0,0.08);
             border-bottom: 8px solid $subMenu;
             @include opacity(0);
             @include translate3d(0, 30px, 0);
+            z-index: 99;
         }
         &.link:after {
             display: none;
@@ -67,7 +68,7 @@ $activeLink: rgba(0,0,0,0.08);
             @include absolute(-1000px,null,null,-8px);
             background: $subMenu;
             @include border-radius(3px);
-            @include drop-shadow(0,1px,2px,rgba(0,0,0,0.1));
+            @include drop-shadow(0,1px,3px,rgba(0,0,0,0.2));
             padding: 8px 0;
             @include opacity(0);
             @include translate3d(0, 30px, 0);
@@ -80,9 +81,10 @@ $activeLink: rgba(0,0,0,0.08);
                     @include pad(14px, 24px);
                 }
                 &:hover {
-                    background: $activeLink;
+                    @include angled-gradient(transparentize($color-primary,0.2), transparentize(adjust-hue($color-primary, -10deg),0.2));
                     .anchor {
-                        color: $color-primary;
+                        color: white;
+                        font-weight: 500;
                     }
                 }
             }
@@ -128,14 +130,13 @@ $activeLink: rgba(0,0,0,0.08);
             z-index: 999;
         }
         .logo {
-            height: $nav-height;
+            height: $link-height;
+            line-height: $link-height - 1;
             background-color: $subMenu;
             display: block;
             position: relative;
             @include font-size(2);
             font-weight: 900;
-            height: $link-height;
-            line-height: $link-height - 1;
             @include drop-shadow(0,1px,0,rgba(0,0,0,0.05));
             text-align: center;
             z-index: 9;
@@ -155,6 +156,15 @@ $activeLink: rgba(0,0,0,0.08);
                 display: block;
                 @include animate(fade-in 300ms ease-in-out);
                 .navigation__link {
+                    @include animate(lift 500ms cubic-bezier(0.175, 0.885, 0.32, 1.150));
+                    @include keyframes(lift) {
+                        0% {
+                            @include translate3d(0, 60px, 0);
+                        }
+                        100% {
+                            @include translate3d(0, 0, 0);
+                        }
+                    }
                     @for $i from 1 through 16 {
                         &:nth-child(#{$i}) .anchor {
                             @include animate(lift#{$i} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.150));
@@ -175,6 +185,15 @@ $activeLink: rgba(0,0,0,0.08);
                 @include animate(fade-out 500ms ease-in-out);
                 @include opacity(0);
                 .navigation__link {
+                    @include animate(fall 300ms ease-in);
+                    @include keyframes(fall) {
+                        0% {
+                            @include translate3d(0, 0, 0);
+                        }
+                        100% {
+                            @include translate3d(0, 60px, 0);
+                        }
+                    }
                     @for $i from 1 through 16 {
                         &:nth-child(#{$i}) .anchor {
                             @include opacity(0);

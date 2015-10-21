@@ -15,8 +15,12 @@
 	right: 0;
 	left: 0;
 	bottom: 0;
-	min-width: 100%;
+	max-width: 100%;
 	content: url(../images/people/crowdDark.png);
+	@include breakpoint($TV) {
+		min-width: 100%;
+		margin-bottom: -5%;
+	}
 	@include breakpoint($desktop) {
 		max-width: 100%;
 		right: 0;
