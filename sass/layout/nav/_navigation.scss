@@ -148,6 +148,11 @@ $activeLink: rgba(0,0,0,0.08);
 
 
 @include breakpoint($portable) {
+    .navigation__shop {
+        height: 0;
+        @include fixed(0,0,null,0);
+        z-index: 99;
+    }
     .social {
         display: none;
     }
