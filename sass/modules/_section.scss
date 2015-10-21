@@ -100,7 +100,6 @@
 		right: 0;
 		left: 0;
 		bottom: 0;
-		max-height: auto;
 		min-width: 100%;
 		@include breakpoint($TV) {
 			margin-bottom: -5%;

@@ -9671,7 +9671,7 @@ section.page {
   position: relative;
   padding: 0 24px;
   *zoom: 1;
-  height: 500px; }
+  height: 400px; }
   @media (max-width: 600px) {
     .footer__container {
       padding: 0 16px; } }
@@ -9686,9 +9686,13 @@ section.page {
   right: 0;
   left: 0;
   bottom: 0;
-  max-height: auto;
   min-width: 100%;
   content: url(../images/people/crowdDark.png); }
+  @media (max-width: 1240px) {
+    .footer__image {
+      max-width: 100%;
+      right: 0;
+      left: 0; } }
   @media (max-width: 950px) {
     .footer__image {
       max-width: 120%;
@@ -10192,7 +10196,6 @@ section.page {
     right: 0;
     left: 0;
     bottom: 0;
-    max-height: auto;
     min-width: 100%; }
     @media (min-width: 1200px) {
       .section__image.center {

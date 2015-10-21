@@ -8,16 +8,20 @@
 .footer__container {
 	@include max-width;
 	@include clearfix;
-	height: 500px;
+	height: 400px;
 }
 .footer__image {
 	position: absolute;
 	right: 0;
 	left: 0;
 	bottom: 0;
-	max-height: auto;
 	min-width: 100%;
 	content: url(../images/people/crowdDark.png);
+	@include breakpoint($desktop) {
+		max-width: 100%;
+		right: 0;
+		left: 0;
+	}
 	@include breakpoint($portable-landscape) {
 		max-width: 120%;
 		right: -10%;
