@@ -657,17 +657,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 59px; }
 
 .hero__image .hero__image__container {
-  height: 392px;
+  height: 412px;
   position: absolute;
   top: 59px;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(../images/backgrounds/facebook.png);
+  background-image: url(../images/backgrounds/facebook.jpg);
   background-repeat: repeat-x;
   background-size: auto 100%; }
 .hero__image .hero__overlay {
-  height: 392px;
+  height: 412px;
   position: absolute;
   top: 59px;
   right: 0;
@@ -687,7 +687,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   position: relative;
   padding: 0 24px;
-  height: 392px;
+  height: 412px;
   position: relative; }
   @media (max-width: 600px) {
     .hero__container {

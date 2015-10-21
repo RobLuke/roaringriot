@@ -1,4 +1,4 @@
-$heroHeight: 392px;
+$heroHeight: 412px;
 
 .hero {
 	margin-top: $nav-height - 1;
@@ -7,7 +7,7 @@ $heroHeight: 392px;
 	.hero__image__container {
 		height: $heroHeight;
 		@include absolute($nav-height - 1,0,0,0);
-		background-image: url(../images/backgrounds/facebook.png);
+		background-image: url(../images/backgrounds/facebook.jpg);
 		background-repeat: repeat-x;
 		background-size: auto 100%;
 	}
