@@ -17,13 +17,11 @@ $activeLink: rgba(0,0,0,0.08);
             @include max-width;
         }
         .logo {
-            height: $nav-height;
-            @include font-size(2);
-            line-height: $nav-height - 1;
-            font-weight: 900;
-            color: #0F0B15;
-            span {
-                color: $color-primary;
+            float: left;
+            img {
+                width: 160px;
+                position: relative;
+                top: 20px;
             }
         }
         .navigation__links {
@@ -131,18 +129,15 @@ $activeLink: rgba(0,0,0,0.08);
         }
         .logo {
             height: $link-height;
-            line-height: $link-height - 1;
             background-color: $subMenu;
             display: block;
             position: relative;
-            @include font-size(2);
-            font-weight: 900;
             @include drop-shadow(0,1px,0,rgba(0,0,0,0.05));
-            text-align: center;
             z-index: 9;
-            color: #0F0B15;
-            span {
-                color: $color-primary;
+            img {
+                width: 160px;
+                margin: auto;
+                @include absolute(0,0,0,0);
             }
         }
         .navigation__links {
@@ -156,15 +151,6 @@ $activeLink: rgba(0,0,0,0.08);
                 display: block;
                 @include animate(fade-in 300ms ease-in-out);
                 .navigation__link {
-                    @include animate(lift 500ms cubic-bezier(0.175, 0.885, 0.32, 1.150));
-                    @include keyframes(lift) {
-                        0% {
-                            @include translate3d(0, 60px, 0);
-                        }
-                        100% {
-                            @include translate3d(0, 0, 0);
-                        }
-                    }
                     @for $i from 1 through 16 {
                         &:nth-child(#{$i}) .anchor {
                             @include animate(lift#{$i} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.150));
@@ -185,15 +171,6 @@ $activeLink: rgba(0,0,0,0.08);
                 @include animate(fade-out 500ms ease-in-out);
                 @include opacity(0);
                 .navigation__link {
-                    @include animate(fall 300ms ease-in);
-                    @include keyframes(fall) {
-                        0% {
-                            @include translate3d(0, 0, 0);
-                        }
-                        100% {
-                            @include translate3d(0, 60px, 0);
-                        }
-                    }
                     @for $i from 1 through 16 {
                         &:nth-child(#{$i}) .anchor {
                             @include opacity(0);

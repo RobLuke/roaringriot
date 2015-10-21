@@ -14,8 +14,8 @@ mixin navChild(link, name)
 
 nav.navigation
 	.navigation__container
-		a(href='#').logo ROARING
-			span RIOT
+		a(href='#').logo
+			img(src='images/brand/logo.svg')
 		ul.navigation__links
 			+nav('#', 'Home')
 			+navParent('Membership')

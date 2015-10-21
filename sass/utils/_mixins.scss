@@ -137,7 +137,7 @@ $root: "../images/";
   background: -o-linear-gradient(top, $from, $to);
   background: linear-gradient(top, $from, $to);
 }
-@mixin angled-gradient ($from: $color-primary,$to: adjust-hue($color-primary, -10deg)) {
+@mixin angled-gradient ($from: $color-primary,$to: adjust-hue($color-primary, -5deg)) {
   background: $from; /* Old browsers */
   background: -moz-linear-gradient(-25deg,  $from 0%, $to 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$from), color-stop(100%,$to));
