@@ -16,18 +16,6 @@ mixin navChild(link, name)
 .navigation__shop
 	.navigation__shop__container
 		+socialGroup('white')
-		//- ul.social
-		//- 	li.social__twitter
-		//- 		img(src='images/ui_icons/twitter-blue.svg')
-		//- 	li.social__twitter
-		//- 		img(src='images/ui_icons/facebook-blue.svg')
-		//- 	li.social__twitter
-		//- 		img(src='images/ui_icons/instagram-blue.svg')
-		//- ul.shopping
-		//- 	li
-		//- 		img(src='images/ui_icons/cart-white.svg')
-		//- 	li
-		//- 		img(src='images/ui_icons/search-white.svg')
 nav.navigation
 	.navigation__container
 		a(href='index.html').logo
@@ -69,4 +57,5 @@ nav.navigation
 				+navChild('#', 'Contact Us')
 		.navigation__search
 		.navigation__shoppingCart
+			.shoppingCart__count
 		.burger

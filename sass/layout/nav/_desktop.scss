@@ -68,6 +68,23 @@ $activeLink: rgba(255,255,255,0.2);
             background-repeat: no-repeat;
             cursor: pointer;
             z-index: 999;
+            .shoppingCart__count {
+                display: block;
+                height: 14px;
+                @include border-radius(7px);
+                @include absolute(0,34px,0,null);
+                margin: auto 0;
+                padding: 0 5px;
+                background: $second-color;
+                font-size: 8px;
+                line-height: 14px;
+                color: white;
+                text-align: center;
+                font-weight: 500;
+                &:empty {
+                   display: none;
+                }
+            }
         }
     }
 

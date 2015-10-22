@@ -844,6 +844,26 @@ h1, h2, h3, h4, h5, h6 {
       background-repeat: no-repeat;
       cursor: pointer;
       z-index: 999; }
+      .navigation .navigation__shoppingCart .shoppingCart__count {
+        display: block;
+        height: 14px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        position: absolute;
+        top: 0;
+        right: 34px;
+        bottom: 0;
+        margin: auto 0;
+        padding: 0 5px;
+        background: #1A1919;
+        font-size: 8px;
+        line-height: 14px;
+        color: white;
+        text-align: center;
+        font-weight: 500; }
+        .navigation .navigation__shoppingCart .shoppingCart__count:empty {
+          display: none; }
 
   .navigation__link {
     height: 60px;
@@ -10329,7 +10349,6 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -80px; }
     @media (max-width: 950px) {
       .section__image.left {
-        left: -5%;
         max-width: 50%; } }
     @media (max-width: 600px) {
       .section__image.left {
