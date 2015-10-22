@@ -1,0 +1,9 @@
+mixin social(type, link)
+	li.social(class= type)
+		a(href= link)
+
+mixin socialGroup(color)
+	ul.socialGroup(class= color)
+		+social('twitter', '#')
+		+social('facebook', '#')
+		+social('instagram', '#')

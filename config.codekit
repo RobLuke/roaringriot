@@ -557,6 +557,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/jade\/modules\/social.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/modules\/social.jade",
+		"outputAbbreviatedPath": "\/jade\/modules\/social.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/jade\/modules\/topSellers.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -793,15 +804,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/layout\/nav\/_animation.scss": {
+	"\/sass\/layout\/nav\/_desktop.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/layout\/nav\/_animation.scss",
-		"outputAbbreviatedPath": "\/sass\/layout\/css\/_animation.css",
+		"inputAbbreviatedPath": "\/sass\/layout\/nav\/_desktop.scss",
+		"outputAbbreviatedPath": "\/sass\/layout\/css\/_desktop.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -809,15 +820,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/layout\/nav\/_navigation.scss": {
+	"\/sass\/layout\/nav\/_mobile.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/layout\/nav\/_navigation.scss",
-		"outputAbbreviatedPath": "\/sass\/layout\/css\/_navigation.css",
+		"inputAbbreviatedPath": "\/sass\/layout\/nav\/_mobile.scss",
+		"outputAbbreviatedPath": "\/sass\/layout\/css\/_mobile.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -882,6 +893,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/modules\/_section.scss",
 		"outputAbbreviatedPath": "\/sass\/css\/_section.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/modules\/_social.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/modules\/_social.scss",
+		"outputAbbreviatedPath": "\/sass\/css\/_social.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

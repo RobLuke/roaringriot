@@ -1,0 +1,37 @@
+.socialGroup {
+	padding-bottom: 16px;
+	&.blue .social {
+		background: $color-primary;
+		&.twitter {
+			background-image: url(../images/ui_icons/twitter-white.svg);
+		}
+		&.facebook {
+			background-image: url(../images/ui_icons/facebook-white.svg);
+		}
+		&.instagram {
+			background-image: url(../images/ui_icons/instagram-white.svg);
+		}
+	}
+	&.white .social {
+		background: white;
+		&.twitter {
+			background-image: url(../images/ui_icons/twitter-blue.svg);
+		}
+		&.facebook {
+			background-image: url(../images/ui_icons/facebook-blue.svg);
+		}
+		&.instagram {
+			background-image: url(../images/ui_icons/instagram-blue.svg);
+		}
+	}
+	.social{
+		@include square(24px);
+		position: relative;
+		display: inline-block;
+		@include circle();
+		margin: 8px 6px;
+		background-position: 0px 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+	}
+}

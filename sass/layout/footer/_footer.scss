@@ -88,19 +88,3 @@
 		color: $color-primary;
 	}
 }
-.social {
-	padding-bottom: 16px;
-	li {
-		@include square(24px);
-		position: relative;
-		display: inline-block;
-		@include circle();
-		background: $color-primary;
-		margin: 8px 6px;
-		img {
-			@include square(100%);
-			@include absolute(0,0,0,0);
-			margin: auto;
-		}
-	}
-}

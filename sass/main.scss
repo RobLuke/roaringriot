@@ -30,8 +30,8 @@
     'layout/header/hero';
 // nav
 @import
-    'layout/nav/navigation',
-    'layout/nav/animation';
+    'layout/nav/desktop',
+    'layout/nav/mobile';
 //body
 @import
     'layout/body/content';
@@ -44,6 +44,7 @@
     'modules/chapters',
     'modules/events',
     'modules/section',
+    'modules/social',
     'modules/topSellers';
 
 // TOOLS
