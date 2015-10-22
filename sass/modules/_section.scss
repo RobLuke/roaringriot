@@ -14,13 +14,13 @@
 		}
 	}
 	&.grey {
-		background-color: #F5F7F8;
+		background-color: $off-white;
 	}
 	&.eventPage {
 		.section__container {
 			@include max-width(600px);
 			@include breakpoint($mobile) {
-				padding: 0 !important;
+				padding: 0;
 			}
 		}
 	}
@@ -78,29 +78,33 @@
 	}
 }
 .section__image {
-	max-height: 130%;
-	max-width: 45%;
-	@include image-cover;
+	max-width: 50%;
+	max-height: 150%;
+	@include breakpoint($portable) {
+		max-width: 60%;
+	}
+	img {
+		width: 100%;
+	}
+	&.right,
 	&.left {
 		position: absolute;
-		left: 16px;
-		bottom: -80px;
-		@include breakpoint($portable-landscape) {
-			max-width: 50%;
+		bottom: -90px;
+		@include breakpoint($portable) {
+			position: relative;
+			margin: 8px auto 0;
+			left: 0;
+			right: 0;
 		}
 		@include breakpoint($mobile) {
-			left: 0;
-			max-width: 85%;
+			max-width: 75%;
 		}
 	}
 	&.right {
-		position: absolute;
 		right: 16px;
-		bottom: -80px;
-		@include breakpoint($mobile) {
-			right: 0;
-			max-width: 85%;
-		}
+	}
+	&.left {
+		left: 16px;
 	}
 	&.center {
 		position: absolute;
@@ -132,23 +136,5 @@
 			right: -50%;
 			left: -50%;
 		}
-	}
-	@include breakpoint($portable) {
-		max-width: 60%;
-		&.left,
-		&.right {
-			position: relative;
-			margin: 8px auto 0;
-			left: auto;
-		}
-	}
-	&.whyRiot {
-		content: url(../images/people/beer.png);
-	}
-	&.joinUs {
-		content: url(../images/people/couple.png);
-	}
-	&.yourCity {
-		content: url(../images/people/crowd.png);
 	}
 }

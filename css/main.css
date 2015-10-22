@@ -9807,9 +9807,10 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 0;
-  max-width: 100%;
-  content: url(../images/people/crowdDark.png); }
+  bottom: -10px;
+  max-width: 100%; }
+  .footer__image img {
+    width: 100%; }
   @media (min-width: 1241px) {
     .footer__image {
       min-width: 100%;
@@ -10089,7 +10090,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate3d(0, 0, 0); }
 
 .events {
-  *zoom: 1; }
+  *zoom: 1;
+  margin-top: 10px; }
   .events:before, .events:after {
     content: " ";
     display: table; }
@@ -10279,7 +10281,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 16px; } }
     @media (max-width: 600px) {
       .section.eventPage .section__container {
-        padding: 0 !important; } }
+        padding: 0; } }
 
 .section__container {
   max-width: 960px;
@@ -10337,31 +10339,29 @@ h1, h2, h3, h4, h5, h6 {
         float: none; } }
 
 .section__image {
-  max-height: 130%;
-  max-width: 45%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .section__image.left {
+  max-width: 50%;
+  max-height: 150%; }
+  @media (max-width: 768px) {
+    .section__image {
+      max-width: 60%; } }
+  .section__image img {
+    width: 100%; }
+  .section__image.right, .section__image.left {
     position: absolute;
-    left: 16px;
-    bottom: -80px; }
-    @media (max-width: 950px) {
-      .section__image.left {
-        max-width: 50%; } }
-    @media (max-width: 600px) {
-      .section__image.left {
+    bottom: -90px; }
+    @media (max-width: 768px) {
+      .section__image.right, .section__image.left {
+        position: relative;
+        margin: 8px auto 0;
         left: 0;
-        max-width: 85%; } }
-  .section__image.right {
-    position: absolute;
-    right: 16px;
-    bottom: -80px; }
+        right: 0; } }
     @media (max-width: 600px) {
-      .section__image.right {
-        right: 0;
-        max-width: 85%; } }
+      .section__image.right, .section__image.left {
+        max-width: 75%; } }
+  .section__image.right {
+    right: 16px; }
+  .section__image.left {
+    left: 16px; }
   .section__image.center {
     position: absolute;
     right: 0;
@@ -10392,19 +10392,6 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 200%;
         right: -50%;
         left: -50%; } }
-  @media (max-width: 768px) {
-    .section__image {
-      max-width: 60%; }
-      .section__image.left, .section__image.right {
-        position: relative;
-        margin: 8px auto 0;
-        left: auto; } }
-  .section__image.whyRiot {
-    content: url(../images/people/beer.png); }
-  .section__image.joinUs {
-    content: url(../images/people/couple.png); }
-  .section__image.yourCity {
-    content: url(../images/people/crowd.png); }
 
 .socialGroup {
   padding-bottom: 16px; }
