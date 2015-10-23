@@ -1,6 +1,8 @@
 a {
-	color: $text;
+	color: $color-primary;
 	text-decoration: none;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	@include breakpoint($hover-zone) {
 		&:hover {
 			color: $text;
@@ -31,11 +33,24 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .section__title {
+	display: block;
 	font-size: 32px;
-	font-weight: 800;
+	font-weight: 700;
 	color: $color-primary;
 	padding-bottom: 48px;
+	a {
+		float: right;
+		position: relative;
+		top: 16px;
+		font-size: 14px;
+		text-decoration: underline;
+	}
 	@include breakpoint($mobile) {
 		text-align: center;
+		a {
+			float: none;
+			display: block;
+			text-align: center;
+		}
 	}
 }

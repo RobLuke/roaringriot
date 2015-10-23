@@ -118,6 +118,7 @@ $activeLink: rgba(255,255,255,0.2);
         }
         a {
             display: block;
+            color: $text;
             @include square(100%);
         }
         .navigation__sublinks {
