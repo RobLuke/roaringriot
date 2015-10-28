@@ -1,12 +1,13 @@
 mixin footer
-	footer.footer.white
+	footer.footer
 		.footer__image.center
 			//- .image
-			img(src='images/people/crowdDark.png')
+			img(src='//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/crowdDark.png')
 		.footer__container
 			.footer__subscribe
-				input(type='text' placeholder='Join our Newsletter')
-				button.button Subscribe
+				form
+					input.input(type='text' placeholder='Join our Newsletter')
+					input.button(type='submit' name='subscribe' id='subscribe')
 			.footer__base
 				+socialGroup('blue')
 				p Copyright © 2015 Roaring Riot | 

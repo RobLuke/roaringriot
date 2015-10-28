@@ -19,7 +19,7 @@ mixin navChild(link, name)
 nav.navigation
 	.navigation__container
 		a(href='index.html').logo
-			img(src='images/brand/logo.svg')
+			img(src='//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/logo.svg')
 		ul.navigation__links
 			+nav('index.html', 'Home')
 			+navParent('Membership')
@@ -55,7 +55,7 @@ nav.navigation
 				+navChild('#', 'Social Events')
 				+navChild('#', 'Gallery')
 				+navChild('#', 'Contact Us')
-		.navigation__search
-		.navigation__shoppingCart
+		a(href='#').navigation__search
+		a(href='#').navigation__shoppingCart
 			.shoppingCart__count
 		.burger

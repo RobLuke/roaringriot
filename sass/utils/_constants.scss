@@ -3,6 +3,8 @@ $shop-height: 32px;
 $header-height: $nav-height + $shop-height;
 $link-height: $nav-height;
 
+$shopifyAssets: "//cdn.shopify.com/s/files/1/0872/5956/t/2/assets";
+
 @mixin pad($a: 0,$b: 24px) {
     padding: $a $b;
     @include breakpoint($mobile) {
@@ -18,6 +20,4 @@ $link-height: $nav-height;
 }
 
 $border: 1px solid #eee;
-
-.hide {display: none !important;}
 

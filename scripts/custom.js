@@ -42,7 +42,15 @@ $('.navigation__sublink, .navigation__link.link').click(function() {
         next();
     });
 });
-
+$('.chapter__container').click(function() {
+    if ($(this).hasClass('is-active')) {
+        $(this).removeClass('is-active');
+    }
+    else {
+        $('.chapter__container').removeClass('is-active');
+        $(this).addClass('is-active');
+    }
+});
 
 
 

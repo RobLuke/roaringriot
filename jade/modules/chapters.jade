@@ -1,34 +1,34 @@
 mixin chapter(colorImage, bwImage, location)
 	li.chapter
 		.chapter__color(class= location)
-		a.chapter__container
+		.chapter__container
 			.chapter__logo
 				img.chapter__logo--color(src= colorImage)
 				img.chapter__logo--bw(src= bwImage)
 			h6.h6.chapter__location= location
 			.chapter__links
-				.chapter__join
-					.badge
-						img(src='images/ui_icons/heart.svg')
+				a(href='#').chapter__join
+					.chapter__links--badge
+						img(src='//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/heart.svg')
 					h6.h6 join
-				.chapter__facebook
-					.badge
-						img(src='images/ui_icons/facebook.svg')
+				a(href='#').chapter__facebook
+					.chapter__links--badge
+						img(src='//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/facebook.svg')
 					h6.h6 visit
 
 mixin chapters
 	.chapters
 		h3.h3.titleBar Our Chapters
 		ul
-			+chapter('images/chapters/color/atlanta.png','images/chapters/bw/atlanta.png','Atlanta')
-			+chapter('images/chapters/color/queen.png','images/chapters/bw/queen.png','Charlotte')
-			+chapter('images/chapters/color/denver.png','images/chapters/bw/denver.png','Denver')
-			+chapter('images/chapters/color/gate.png','images/chapters/bw/gate.png','Greensboro')
-			+chapter('images/chapters/color/oak.png','images/chapters/bw/oak.png','Greenville')
-			+chapter('images/chapters/color/upstate.png','images/chapters/bw/upstate.png','Lake Norman')
-			+chapter('images/chapters/color/cola.png','images/chapters/bw/cola.png','New Orleans')
-			+chapter('images/chapters/color/apple.png','images/chapters/bw/apple.png','New York')
-			+chapter('images/chapters/color/capital.png','images/chapters/bw/capital.png','Washington')
-			+chapter('images/chapters/color/twin.png','images/chapters/bw/twin.png','Winston Salem')
-			+chapter('images/chapters/color/apple.png','images/chapters/bw/apple.png','New York')
-			+chapter('images/chapters/color/queen.png','images/chapters/bw/queen.png','Charlotte')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/atlanta.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/atlanta-bw.png','Atlanta')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/queen.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/queen-bw.png','Charlotte')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/denver.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/denver-bw.png','Denver')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/gate.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/gate-bw.png','Greensboro')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/oak.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/oak-bw.png','Greenville')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/upstate.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/upstate-bw.png','Lake Norman')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/cola.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/cola-bw.png','New Orleans')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/apple.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/apple-bw.png','New York')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/capital.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/capital-bw.png','Washington')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/twin.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/twin-bw.png','Winston Salem')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/apple.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/apple-bw.png','New York')
+			+chapter('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/queen.png','//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/queen-bw.png','Charlotte')

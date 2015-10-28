@@ -10,7 +10,7 @@ $heroHeight: 412px;
 	.hero__image__container {
 		height: $heroHeight;
 		@include absolute($header-height - 1,0,0,0);
-		background-image: url(../images/backgrounds/facebook.jpg);
+		background-image: url('//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/facebook.jpg');
 		background-repeat: repeat-x;
 		background-size: auto 100%;
 	}
@@ -34,7 +34,7 @@ $heroHeight: 412px;
 .hero__message {
 	@include center-vertical();
   .h3 {
-  	font-size: 26px;
+  	font-size: 28px;
   	font-weight: 500;
   	color: white;
   	text-transform: uppercase;
@@ -46,8 +46,13 @@ $heroHeight: 412px;
   	}
   }
   .button {
+  	width: 200px;
   	margin-top: 48px;
   	margin-left: 0;
+  	@include breakpoint($portable) {
+  		margin-left: auto;
+			margin-right: auto;
+  	}
   }
 	@include breakpoint($portable) {
 		left: 0;

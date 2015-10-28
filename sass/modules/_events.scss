@@ -1,6 +1,10 @@
 .events {
 	@include clearfix;
 	margin-top: 10px;
+	@include breakpoint($mobile) {
+		margin-left: -16px;
+		margin-right: -16px;
+	}
 }
 .event {
 	height: 0;
@@ -35,20 +39,15 @@
 		}
 	}
 	@include breakpoint($mobile) {
-		width: auto;
+		width: 100%;
 		padding-bottom: 60%;
 		margin-bottom: 1px;
-		margin-left: -16px;
-		margin-right: -16px;
+		margin-right: auto;
 		@include border-radius(0);
-		&:nth-child(2) {
-			margin-right: -16px;
-		}
 		&:last-child {
-			width: auto;
+			width: 100%;
 			padding-bottom: 60%;
 			margin-bottom: -80px;
-			margin-right: -16px;
 		}
 	}
 }

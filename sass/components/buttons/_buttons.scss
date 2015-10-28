@@ -1,14 +1,17 @@
 .button {
+    display: inline-block;
     border: none;
     outline: none;
-    min-width: 200px;
+    min-width: 100px;
     height: 44px;
     line-height: 42px;
-    padding: 0 8px;
+    padding: 0 16px;
     margin: 0 8px;
     background: white;
     color: $color-primary;
-    font-weight: 500;
+    font-weight: 500 !important;
+    text-decoration: none;
+    text-align: center;
     @include border-radius(3px);
     @include font-size(1.4);
     @include transition(background 120ms ease-in-out, color 120ms ease-in-out);

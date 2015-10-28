@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Starter</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100|Roboto+Slab:400,700,300,100" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" language="javascript" src="scripts/modernizr.min.js"></script>
     <script type="text/javascript" language="javascript" src="scripts/jquery-11.0.min.js"></script>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <nav class="navigation">
-      <div class="navigation__container"><a href="index.html" class="logo"><img src="images/brand/logo.svg"></a>
+      <div class="navigation__container"><a href="index.html" class="logo"><img src="//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/logo.svg"></a>
         <ul class="navigation__links">
               <li class="navigation__link link"><a href="index.html" class="anchor">Home</a></li>
               <li class="navigation__link">
@@ -80,11 +80,8 @@
                       <li class="navigation__sublink"><a href="#" class="anchor">Contact Us</a></li>
                 </ul>
               </li>
-        </ul>
-        <div class="navigation__search"></div>
-        <div class="navigation__shoppingCart">
-          <div class="shoppingCart__count"></div>
-        </div>
+        </ul><a href="#" class="navigation__search"></a><a href="#" class="navigation__shoppingCart">
+          <div class="shoppingCart__count"></div></a>
         <div class="burger"></div>
       </div>
     </nav>
@@ -146,13 +143,15 @@
                 </div>
           </div>
         </section>
-        <footer class="footer white">
-          <div class="footer__image center"><img src="images/people/crowdDark.png">
+        <footer class="footer">
+          <div class="footer__image center"><img src="//cdn.shopify.com/s/files/1/0872/5956/t/2/assets/crowdDark.png">
           </div>
           <div class="footer__container">
             <div class="footer__subscribe">
-              <input type="text" placeholder="Join our Newsletter">
-              <button class="button">Subscribe</button>
+              <form>
+                <input type="text" placeholder="Join our Newsletter" class="input">
+                <input type="submit" name="subscribe" id="subscribe" class="button">
+              </form>
             </div>
             <div class="footer__base">
                   <ul class="socialGroup blue">

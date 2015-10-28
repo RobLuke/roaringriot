@@ -2,26 +2,53 @@
 	padding-bottom: 16px;
 	&.blue .social {
 		background: $color-primary;
+
+		// SHOPIFY LINKS
 		&.twitter {
-			background-image: url(../images/ui_icons/twitter-white.svg);
+			background-image: url('#{$shopifyAssets}/twitter-white.svg');
 		}
 		&.facebook {
-			background-image: url(../images/ui_icons/facebook-white.svg);
+			background-image: url('#{$shopifyAssets}/facebook-white.svg');
 		}
 		&.instagram {
-			background-image: url(../images/ui_icons/instagram-white.svg);
+			background-image: url('#{$shopifyAssets}/instagram-white.svg');
+		}
+		&:hover {
+			background: white;
+			&.twitter {
+				background-image: url('#{$shopifyAssets}/twitter-blue.svg');
+			}
+			&.facebook {
+				background-image: url('#{$shopifyAssets}/facebook-blue.svg');
+			}
+			&.instagram {
+				background-image: url('#{$shopifyAssets}/instagram-blue.svg');
+			}
 		}
 	}
 	&.white .social {
 		background: white;
+		// SHOPIFY LINKS
 		&.twitter {
-			background-image: url(../images/ui_icons/twitter-blue.svg);
+			background-image: url('#{$shopifyAssets}/twitter-blue.svg');
 		}
 		&.facebook {
-			background-image: url(../images/ui_icons/facebook-blue.svg);
+			background-image: url('#{$shopifyAssets}/facebook-blue.svg');
 		}
 		&.instagram {
-			background-image: url(../images/ui_icons/instagram-blue.svg);
+			background-image: url('#{$shopifyAssets}/instagram-blue.svg');
+		}
+		&:hover {
+			background: $second-color;
+			&.twitter {
+				background-image: url('#{$shopifyAssets}/twitter-white.svg');
+			}
+			&.facebook {
+				background-image: url('#{$shopifyAssets}/facebook-white.svg');
+			}
+			&.instagram {
+				background-image: url('#{$shopifyAssets}/instagram-white.svg');
+			}
 		}
 	}
 	.social{
@@ -33,5 +60,9 @@
 		background-position: 0px 1px;
     background-repeat: no-repeat;
     cursor: pointer;
+    a {
+    	display: block;
+    	@include square(100%);
+    }
 	}
 }

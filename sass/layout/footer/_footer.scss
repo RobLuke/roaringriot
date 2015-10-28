@@ -59,8 +59,9 @@
 	margin: 48px auto 0;
 	background: rgba(255,255,255,0.3);
 	@include border-radius(3px);
-	input {
-		@include size(180px, 100%);
+	@include placeholder(rgba(255,255,255,0.7));
+	.input {
+		@include size(180px, 30px);
 		padding-left: 16px;
 		border: none;
 		outline: none;
@@ -68,18 +69,22 @@
 		color: white;
 		font-size: 12px;
 	}
-	button.button {
+	.button {
 		max-width: 100px;
 		min-width: 100px;
 		width: 100px;
 		position: absolute;
+		top: 0;
 		right: 0;
 		margin-right: 0;
+		padding: 0;
 		background: $color-primary;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		color: white;
 		font-size: 14px;
 		height: 30px;
 		line-height: 28px;
+		text-align: center;
 		@include border-radius(0 3px 3px 0);
 	}
 }
@@ -92,8 +97,10 @@
 		color: rgba(255,255,255,0.6);
 		font-size: 12px;
 		line-height: 1.3em;
+		font-weight: 500;
 	}
 	a {
 		color: $color-primary;
+		font-weight: 500;
 	}
 }

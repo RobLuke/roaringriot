@@ -30,14 +30,21 @@
 	@include clearfix;
 }
 .section__message {
-	width: 40%;
+	width: 45%;
+	position: relative;
+	z-index: 1;
 	p {
 		font-size: 18px;
 		line-height: 1.5em;
 	}
-	.button {
-		margin: 0;
+	a.button {
+		text-decoration: none;
+		width: 200px;
 		margin-top: 48px;
+		margin-left: 0;
+		@include breakpoint($portable) {
+			margin: 48px auto 0;
+		}
 	}
 	a {
 		display: block;
@@ -78,7 +85,7 @@
 	}
 }
 .section__image {
-	max-width: 50%;
+	max-width: 45%;
 	max-height: 150%;
 	@include breakpoint($portable) {
 		max-width: 60%;
@@ -95,6 +102,7 @@
 			margin: 8px auto 0;
 			left: 0;
 			right: 0;
+			float: none !important;
 		}
 		@include breakpoint($mobile) {
 			max-width: 75%;

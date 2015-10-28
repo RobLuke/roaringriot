@@ -7,7 +7,7 @@ mixin store-item(image, price, text)
 			.store-item__description
 				.h3.price= price
 				p.text= text
-				button.button.clear Purchase
+				a(href='#').button.clear Purchase
 
 mixin topSellers
 	section.section.white
@@ -15,7 +15,7 @@ mixin topSellers
 			h2.h2.section__title TOP SELLERS
 				a(href='#') See All
 			ul.topSellers
-				+store-item('images/store/riot.jpg', '$24', 'Do you Riot?')
-				+store-item('images/store/atlanta.jpg', '$18', 'You are a Dirty Bird')
-				+store-item('images/store/insta.jpg', '$24', 'Do you See Me?')
-				+store-item('images/store/luke.jpg', '$24', 'Luke can Tackle Me!')
+				+store-item('//cdn.shopify.com/s/files/1/0872/5956/products/Roaring-Riot-Sunglass-Proof-black-01_grande_f385b330-4fb0-4212-8be1-f69d8525c684_grande.png?v=1446046118', '$5', 'BOTTLE OPENER SUNGLASSES')
+				+store-item('//cdn.shopify.com/s/files/1/0872/5956/products/Do_You_Riot_-_WHTW_-_Front_grande.jpg?v=1440448749', '$24', 'DO YOU RIOT WOMENS T-SHIRT')
+				+store-item('//cdn.shopify.com/s/files/1/0872/5956/products/InstaGraham9_-_BLK_-_Front_grande.jpg?v=1440453085', '$24', 'INSTAGRAHAM T-SHIRT')
+				+store-item('//cdn.shopify.com/s/files/1/0872/5956/products/Luke_Can_Tackle_Me_-_WHTW_-_Front_grande.jpg?v=1440446169', '$24', 'LUKE CAN TACKLE ME T-SHIRT')

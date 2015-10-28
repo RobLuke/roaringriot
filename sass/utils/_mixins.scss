@@ -54,6 +54,20 @@ $root: "../images/";
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@mixin placeholder($color: white) {
+  ::-webkit-input-placeholder {
+   color: $color;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: $color;  
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $color;  
+  }
+  :-ms-input-placeholder {  
+     color: $color;  
+  }
+}
 @mixin clearfix {
   *zoom: 1;
   &:before,

@@ -1,5 +1,18 @@
 /* @group Reset */
 
+.collection-grid,
+.product-grid,
+.grid {
+    @include max-width;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.main-content {
+    margin-top: $header-height - 2;
+    @include breakpoint($portable) {
+        margin-top: $nav-height - 2;
+    }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
